@@ -4,8 +4,6 @@
 #include <time.h>
 #include <unistd.h>
 
-// This code is used to create a struct called Stock that holds a string, a double, and an int. The string is called symbol, the double is called price, and the int is called quantity.
-
 typedef struct stock
 {
     char *symbol;
@@ -30,7 +28,7 @@ int main()
 {
     Stock stocks[20];
     double cash = 5000, netWorth;
-    int quarter = 1, year = 2023, age, yearLeft = 2; // Don't forget the change
+    int quarter = 1, year = 2023, age, yearLeft = 20;
     char name[20];
     initializeApp();
     // Initializing the StockMarket
@@ -71,12 +69,12 @@ int main()
         }
 
     here:
-        usleep(100000);
+        usleep(250000);
         printf("Net Worth: $%.2lf", netWorth);
-        usleep(100000);
-        printf("\t\tCASH: $%.2lf\n", cash);
-        usleep(100000);
-        printf("\t\tStocks Worth: $%.2lf\n", calculateTotalStocksValue(stocks));
+        usleep(250000);
+        printf("\t\tCASH: $%.2lf", cash);
+        usleep(250000);
+        calculateTotalStocksValue(stocks);
         printf("\n");
         choosesPrinter();
         int choice;
@@ -182,12 +180,12 @@ void calculateTotalStocksValue(Stock *stocks)
             totalValue += stocks[i].price;
         }
     }
-    printf("Total value of stocks: $%.2lf\n", totalValue);
+    printf("\t\tTotal value of stocks: $%.2lf\n", totalValue);
 }
 
 void initializeApp()
 {
-    printf("Welcome to the Stock Market Game!\n");
+    printf("\n\nWelcome to the Stock Market Game!\n");
     sleep(1);
     printf("In this game, you will start with $5,000 and have 20 years to reach a net worth of $10,000,000.\n");
     sleep(3);
