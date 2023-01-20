@@ -4,6 +4,8 @@
 #include <time.h>
 #include <unistd.h>
 
+// This code is used to create a struct called Stock that holds a string, a double, and an int. The string is called symbol, the double is called price, and the int is called quantity.
+
 typedef struct stock
 {
     char *symbol;
@@ -11,28 +13,18 @@ typedef struct stock
     int quantity;
 } Stock;
 
-void initializeApp();
-void initializeStockMarket(Stock *stocks);
 char *randomSymbolCreator(char *symbol);
+
 double randomPriceGenerator();
-void freeMemory(Stock *stocks, int size);
 double updatePrice(double price);
+double calcNetWorth(Stock *stocks, double netWorth, double cash);
+
+void initializeStockMarket(Stock *stocks);
+void initializeApp();
+void freeMemory(Stock *stocks, int size);
 void listStocks(Stock *stocks);
 void choosesPrinter();
-
-double
-calcNetWorth(Stock *stocks, double netWorth, double cash)
-{
-    netWorth = cash;
-    for (int i = 0; i < 20; i++)
-    {
-        if (stocks[i].quantity != 0)
-        {
-            netWorth += stocks[i].price * stocks[i].quantity;
-        }
-    }
-    return netWorth;
-}
+void calculateTotalStocksValue(Stock *stocks);
 
 int main()
 {
@@ -80,9 +72,11 @@ int main()
 
     here:
         usleep(100000);
-        printf("Net Worth: %.2lf", netWorth);
+        printf("Net Worth: $%.2lf", netWorth);
         usleep(100000);
-        printf("\t\t\tCASH: $%.2lf\n", cash);
+        printf("\t\tCASH: $%.2lf\n", cash);
+        usleep(100000);
+        printf("\t\tStocks Worth: $%.2lf\n", calculateTotalStocksValue(stocks));
         printf("\n");
         choosesPrinter();
         int choice;
@@ -178,6 +172,19 @@ void choosesPrinter()
     printf("******************\n\n");
 }
 
+void calculateTotalStocksValue(Stock *stocks)
+{
+    double totalValue = 0;
+    for (int i = 0; i < 20; i++)
+    {
+        for (int j = 0; j < stocks[i].quantity; j++)
+        {
+            totalValue += stocks[i].price;
+        }
+    }
+    printf("Total value of stocks: $%.2lf\n", totalValue);
+}
+
 void initializeApp()
 {
     printf("Welcome to the Stock Market Game!\n");
@@ -235,4 +242,17 @@ double updatePrice(double price)
     double randNum = (double)rand() / RAND_MAX; // 0 ile 1 arasında rastgele sayı
     randNum = randNum * 1.5 - 0.5;              // -0.5 ile 1 arasında sayı elde etmek için
     return (double)price * (randNum + 1);
+}
+
+double calcNetWorth(Stock *stocks, double netWorth, double cash)
+{
+    netWorth = cash;
+    for (int i = 0; i < 20; i++)
+    {
+        if (stocks[i].quantity != 0)
+        {
+            netWorth += stocks[i].price * stocks[i].quantity;
+        }
+    }
+    return netWorth;
 }

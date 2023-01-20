@@ -1,4 +1,4 @@
-#StockMarket-Simulator
+# StockMarket-Simulator
 
 ## Description
 
