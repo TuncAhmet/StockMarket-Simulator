@@ -19,7 +19,3 @@ On windows please install [MinGW](https://www.mingw-w64.org/)
 ## How to build
 
 This file contains instructions on how to build the project. It is assumed that you have already installed the required dependencies. If you have not, please refer to the README.md file.
-
-### About goto
-
-We use goto keyword in this project cause of the this project's requirements.
