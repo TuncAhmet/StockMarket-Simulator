@@ -55,3 +55,6 @@
 542	685	7922553526905997	test_matching.exe	348c43bdb33a5292
 573	726	7922553527221300	test_protocol.exe	7fe635567744c72a
 627	798	7922553527972832	exchange_server.exe	febc1fea77b12c0d
+33	203	7922560568237496	CMakeFiles/exchange_server.dir/src/main.c.obj	f99bea290dc05c89
+40	221	7922560568309201	CMakeFiles/exchange_server.dir/src/network.c.obj	87b2879ec1c91d13
+222	335	7922560570189152	exchange_server.exe	febc1fea77b12c0d

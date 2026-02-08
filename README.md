@@ -2,6 +2,9 @@
 
 A high-performance Order Matching Engine written in C with a Python PyQt6 trading dashboard for real-time visualization.
 
+[![CI](https://github.com/TuncAhmet/StockMarket-Simulator/actions/workflows/ci.yml/badge.svg)](https://github.com/TuncAhmet/StockMarket-Simulator/actions/workflows/ci.yml)
+![C](https://img.shields.io/badge/C-99-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.10+-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Features
