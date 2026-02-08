@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-c:
+    name: Build and Test C Backend
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y cmake build-essential
+    
+    - name: Configure CMake
+      run: cmake -B build -S backend-c -DBUILD_TESTS=ON
+    
+    - name: Build
+      run: cmake --build build
+    
+    - name: Run tests
+      run: |
+        cd build
+        ctest --output-on-failure
+    
+  build-python:
+    name: Check Python Frontend
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r frontend-python/requirements.txt
+    
+    - name: Syntax check
+      run: |
+        python -m py_compile frontend-python/main.py
+        python -m py_compile frontend-python/core/socket_client.py
+        python -m py_compile frontend-python/ui/main_window.py
+        python -m py_compile frontend-python/charts/candlestick.py
+        python -m py_compile frontend-python/charts/orderbook_depth.py
+
+  build-windows:
+    name: Build C Backend (Windows)
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Configure CMake
+      run: cmake -B build -S backend-c -DBUILD_TESTS=ON
+    
+    - name: Build
+      run: cmake --build build --config Release
+    
+    - name: Run tests
+      run: |
+        cd build
+        ctest -C Release --output-on-failure

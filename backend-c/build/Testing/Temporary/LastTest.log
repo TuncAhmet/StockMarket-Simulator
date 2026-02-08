@@ -1,0 +1,126 @@
+Start testing: Feb 08 15:02 Türkiye Standart Saati
+----------------------------------------------------------
+1/4 Testing: OrderBookTests
+1/4 Test: OrderBookTests
+Command: "C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/test_order_book.exe"
+Directory: C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build
+"OrderBookTests" start time: Feb 08 15:02 Türkiye Standart Saati
+Output:
+----------------------------------------------------------
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:202:test_order_create:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:203:test_order_book_create:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:204:test_add_single_buy_order:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:205:test_add_single_sell_order:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:206:test_bid_price_priority:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:207:test_ask_price_priority:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:208:test_spread_calculation:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:209:test_order_cancellation:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:210:test_cancel_nonexistent_order:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:211:test_market_order_not_in_book:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:212:test_multiple_orders_same_price:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_order_book.c:213:test_thread_safety_lock:PASS
+
+-----------------------
+12 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"OrderBookTests" end time: Feb 08 15:02 Türkiye Standart Saati
+"OrderBookTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: MatchingTests
+2/4 Test: MatchingTests
+Command: "C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/test_matching.exe"
+Directory: C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build
+"MatchingTests" start time: Feb 08 15:02 Türkiye Standart Saati
+Output:
+----------------------------------------------------------
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_matching.c:209:test_engine_create:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_matching.c:210:test_engine_add_ticker:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_matching.c:211:test_engine_reject_duplicate_ticker:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_matching.c:212:test_engine_get_order_book:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_matching.c:213:test_matching_buy_crosses_ask:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_matching.c:214:test_matching_sell_crosses_bid:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_matching.c:215:test_no_match_when_prices_dont_cross:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_matching.c:216:test_partial_fill:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_matching.c:217:test_engine_cancel_order:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_matching.c:218:test_match_result_lifecycle:PASS
+
+-----------------------
+10 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"MatchingTests" end time: Feb 08 15:02 Türkiye Standart Saati
+"MatchingTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: GBMTests
+3/4 Test: GBMTests
+Command: "C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/test_gbm.exe"
+Directory: C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build
+"GBMTests" start time: Feb 08 15:02 Türkiye Standart Saati
+Output:
+----------------------------------------------------------
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:217:test_rng_seed:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:218:test_rng_uniform_range:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:219:test_rng_uniform_mean:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:220:test_rng_normal_mean:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:221:test_rng_normal_variance:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:222:test_rng_normal_params:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:223:test_gbm_create:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:224:test_gbm_reset:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:225:test_gbm_positive_prices:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:226:test_gbm_drift:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:227:test_gbm_expected_value:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:228:test_stats_mean:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:229:test_stats_variance:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_gbm.c:230:test_stats_stddev:PASS
+
+-----------------------
+14 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"GBMTests" end time: Feb 08 15:02 Türkiye Standart Saati
+"GBMTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: ProtocolTests
+4/4 Test: ProtocolTests
+Command: "C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/test_protocol.exe"
+Directory: C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build
+"ProtocolTests" start time: Feb 08 15:02 Türkiye Standart Saati
+Output:
+----------------------------------------------------------
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_protocol.c:190:test_serialize_market_data:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_protocol.c:191:test_serialize_execution:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_protocol.c:192:test_serialize_error:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_protocol.c:193:test_parse_order_request:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_protocol.c:194:test_parse_order_request_sell:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_protocol.c:195:test_parse_cancel_request:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_protocol.c:196:test_parse_invalid_json:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_protocol.c:197:test_parse_null_input:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_protocol.c:198:test_serialize_null_input:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_protocol.c:199:test_deserialize_message:PASS
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/tests/test_protocol.c:200:test_execution_status_values:PASS
+
+-----------------------
+11 Tests 0 Failures 0 Ignored 
+OK
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"ProtocolTests" end time: Feb 08 15:02 Türkiye Standart Saati
+"ProtocolTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 08 15:02 Türkiye Standart Saati

@@ -1,0 +1,8 @@
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/CMakeFiles/exchange_server.dir
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/CMakeFiles/test_order_book.dir
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/CMakeFiles/test_matching.dir
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/CMakeFiles/test_gbm.dir
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/CMakeFiles/test_protocol.dir
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/CMakeFiles/test.dir
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/CMakeFiles/edit_cache.dir
+C:/Users/Ahmet/workspace/projects/StockMarket-Simulator/backend-c/build/CMakeFiles/rebuild_cache.dir
